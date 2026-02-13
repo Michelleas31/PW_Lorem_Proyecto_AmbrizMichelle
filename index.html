@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Lorem Ipsum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Generador de Lorem Ipsum</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Acerca</a>
+  </nav>
+</header>
+
+<main class="contenedor">
+
+  <section class="columna-izq">
+    <h2>¿Qué es Lorem Ipsum?</h2>
+    <p>Lorem Ipsum es texto de relleno usado en diseño gráfico.</p>
+  </section>
+
+  <section class="columna-der">
+    <h2>Generador</h2>
+
+    <label>Número de párrafos:</label>
+    <input type="number" id="cantidad" min="1">
+
+    <label>
+      <input type="radio" name="tipo" value="parrafos" checked>
+      Párrafos
+    </label>
+
+    <label>
+      <input type="radio" name="tipo" value="linea">
+      Una sola línea
+    </label>
+
+    <button id="generar">Generar texto</button>
+    <button id="copiar">Copiar</button>
+
+    <div id="resultado"></div>
+    <p id="error"></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Michelle Ambriz - Programación Web</p>
+  <a href="https://github.com/Michelleas31/PW_Lorem_Proyecto_AmbrizMichelle#">
+    Ver repositorio
+  </a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
