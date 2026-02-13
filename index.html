@@ -11,42 +11,60 @@
 <body>
 
 <header>
-  <h1>Generador de Lorem Ipsum</h1>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Acerca</a>
-  </nav>
+  <div class="header-container">
+
+    <div class="idiomas">
+      <a href="#">EN</a>
+      <a href="#">ES</a>
+      <a href="#">AR</a>
+      <a href="#">RU</a>
+    </div>
+
+    <h1>Generador de Lorem Ipsum</h1>
+
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Acerca</a>
+    </nav>
+
+  </div>
 </header>
 
 <main class="contenedor">
 
-  <section class="columna-izq">
-    <h2>¿Qué es Lorem Ipsum?</h2>
-    <p>Lorem Ipsum es texto de relleno usado en diseño gráfico.</p>
+  <section class="top">
+
+    <div class="info">
+      <h2>¿Qué es Lorem Ipsum?</h2>
+      <p>Lorem Ipsum es texto de relleno usado en diseño gráfico.</p>
+    </div>
+
+    <div class="generador">
+      <h2>Generador</h2>
+
+      <label>Número de párrafos:</label>
+      <input type="number" id="cantidad" min="1">
+
+      <label>
+        <input type="radio" name="tipo" value="parrafos" checked>
+        Párrafos
+      </label>
+
+      <label>
+        <input type="radio" name="tipo" value="linea">
+        Una sola línea
+      </label>
+
+      <button id="generar">Generar texto</button>
+      <button id="copiar">Copiar</button>
+
+      <p id="error"></p>
+
+    </div>
+
   </section>
 
-  <section class="columna-der">
-    <h2>Generador</h2>
-
-    <label>Número de párrafos:</label>
-    <input type="number" id="cantidad" min="1">
-
-    <label>
-      <input type="radio" name="tipo" value="parrafos" checked>
-      Párrafos
-    </label>
-
-    <label>
-      <input type="radio" name="tipo" value="linea">
-      Una sola línea
-    </label>
-
-    <button id="generar">Generar texto</button>
-    <button id="copiar">Copiar</button>
-
-    <div id="resultado"></div>
-    <p id="error"></p>
-  </section>
+  <section id="resultado"></section>
 
 </main>
 

@@ -4,10 +4,16 @@ const resultado = document.getElementById("resultado");
 const error = document.getElementById("error");
 
 const textos = [
-  "Lorem ipsum dolor sit amet...",
-  "Sed ut perspiciatis unde omnis...",
-  "At vero eos et accusamus...",
-  "Ut enim ad minima veniam..."
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem...",
+  "At vero eos et accusamus et iusto odio dignissimos ducimus...",
+  "Ut enim ad minima veniam, quis nostrum exercitationem ullam...",
+  "Quis autem vel eum iure reprehenderit qui in ea voluptate...",
+  "Duis aute irure dolor in reprehenderit in voluptate velit...",
+  "Excepteur sint occaecat cupidatat non proident...",
+  "Nam libero tempore, cum soluta nobis est eligendi optio...",
+  "Temporibus autem quibusdam et aut officiis debitis...",
+  "Itaque earum rerum hic tenetur a sapiente delectus..."
 ];
 
 generarBtn.addEventListener("click", () => {
@@ -22,7 +28,11 @@ generarBtn.addEventListener("click", () => {
     return;
   }
 
-  let salida = textos.slice(0, cantidad);
+let salida = [];
+
+for (let i = 0; i < cantidad; i++) {
+  salida.push(textos[i % textos.length]);
+}
 
   if (tipo === "parrafos") {
     salida.forEach(texto => {

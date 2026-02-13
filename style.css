@@ -11,6 +11,23 @@ html, body {
     margin: 0;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.idiomas a, nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover, .idiomas a:hover {
+    text-decoration: underline;
+}
+
 main {
     flex: 1;
 }
@@ -25,6 +42,19 @@ header, footer {
   display: flex;
   gap: 20px;
   padding: 20px;
+  flex-direction: column;
+}
+
+.top {
+    display: flex;
+    gap: 20px;
+}
+
+.info, .generador {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px
 }
 
 .columna-izq, .columna-der {
@@ -41,13 +71,25 @@ button {
 }
 
 #resultado {
-  margin-top: 15px;
   background: #eee;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  column-count: 2;
+  column-gap: 40 px;
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  .contenedor {
+  .top {
     flex-direction: column;
+  }
+
+  #resultado {
+    column-count: 1;
   }
 }
